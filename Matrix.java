@@ -22,8 +22,20 @@ public class Matrix
 	public void setRow ( int row, String numbers)
 	{
 		String[] eachNumber = numbers.split(",");
-
-
+		if (row >= matrix.length || eachNumber.length > matrix[0].length)
+			return;
+		else
+		{
+			int[] insertRow = new int [eachNumber.length];
+			for (int i=0; i<eachNumber.length ; i++)
+			{
+				insertRow[i] = Integer.parseInt(eachNumber[i]);
+			}
+			for (int i=0; i<matrix[0].length; i++)
+			{
+				matrix[row][i] = insertRow[i];
+			}
+		}
 
 	}
 }
