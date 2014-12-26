@@ -58,4 +58,33 @@ public class Matrix
 			}
 		}
 	}
+	public String toString()
+	{
+		String semiColon = ";";
+		StringBuffer  text = new StringBuffer();
+		text.append("[");
+		for (int i=0 ; i <matrix.length; i++)
+		{
+			for (int j=0; j<matrix[0].length; j++)
+			{
+				System.out.println (matrix[i][j]);
+			}
+			text.append(semiColon);
+		}
+		text.append("]\n");
+		return text.toString();
+	}
+
+	public void prettyPrint()
+		{
+			for (int i=0 ; i <matrix.length; i++)
+			{
+				for (int j=0; j<matrix[0].length; j++)
+				{
+					System.out.println (matrix[i][j]+"\t");
+				}
+				System.out.println ("\n");
+			}
+	}
+
 }
