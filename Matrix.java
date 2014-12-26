@@ -38,4 +38,24 @@ public class Matrix
 		}
 
 	}
+
+	public void setColumn ( int column , String numbers)
+	{
+		String[] eachNumber = numbers.split(",");
+		if (column >= matrix.length || eachNumber.length > matrix[0].length)
+			return;
+		else
+		{
+			int[] insertColumn = new int [eachNumber.length];
+			for (int i=0 ; i<eachNumber.length ; i++)
+			{
+				insertColumn[i] = Integer.parseInt(eachNumber[i]);
+			}
+			for (int i=0;i <matrix[0].length; i++)
+			{
+				matrix[i][column] = insertColumn[i];
+
+			}
+		}
+	}
 }
